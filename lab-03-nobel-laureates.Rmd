@@ -215,6 +215,9 @@ There are some observations in this dataset that we will exclude from our analys
 
 2.  Create a new data frame called `nobel_living` that filters for
 
+***There are `r nrow(nobel)` rows and `r ncol(nobel)` columns in the nobel dataset. Each row represents a nobel winner***
+
+
 -   laureates for whom `country` is available
 -   laureates who are people as opposed to organizations (organizations are denoted with `"org"` as their `gender`)
 -   laureates who are still alive (their `died_date` is `NA`)
