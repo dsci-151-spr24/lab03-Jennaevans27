@@ -241,6 +241,7 @@ Confirm that once you have filtered for these characteristics you are left with 
 Let's see if that's true.
 
 First, we'll create a new variable to identify whether the laureate was in the US when they won their prize.
+
 We'll use the `mutate()` function for this.
 The following pipeline mutates the `nobel_living` data frame by adding a new variable called `country_us`.
 We use an if statement to create this variable.
@@ -276,6 +277,15 @@ This means you'll need to define this data frame in your R Markdown document, ev
     -   For each facet you should have two bars, one for winners in the US and one for Other.
     -   Flip the coordinates so the bars are horizontal, not vertical.
 
+```{r} 
+library(ggplot2)
+
+ggplot(data = nobel_living_science, aes(y=country_us)) + 
+  geom_bar() + 
+  facet_wrap(~category)
+
+
+```
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.d*
 
 ## But of those US-based Nobel laureates, many were born in other countries
